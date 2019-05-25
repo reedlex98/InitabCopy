@@ -1,0 +1,68 @@
+*{
+    font-family: 'Inconsolata',monospace;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --header-width:150px;
+    --reddit-section-width: 300px;
+    --github-section-width: 300px;
+    --jshistory-section-width:1fr;
+    --jshistory-section-height: 50vh;
+    --pink: #ff79c6;
+    --yellow: #f1f98c;
+    --blue: #66d9ef;
+    --dark-blue: #6272a4;
+    --green:#50f97b;
+    --white:#f8f8f2;
+    --lightblue: #8be9fd;
+    --purple: #bd93f9;
+    --header-color:#44475a;
+    --page-color: #282a36;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 
+        var(--header-width) var(--reddit-section-width) var(--jshistory-section-width) var(--github-section-width);
+    grid-template-rows: 
+        var(--jshistory-section-height) var(--jshistory-section-height);
+    grid-template-areas: 
+        "header javascript-reddit javascript-history github-issues"
+        "header javascript-reddit datetime github-issues";
+    background-color: var(--page-color);
+}
+header{
+    grid-area: header;
+    background-color: var(--header-color);
+    padding: 10px;
+}
+    
+section{
+    overflow: auto;
+    scroll-behavior: smooth;
+    padding: 25px 30px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+section::-webkit-scrollbar { 
+    display: none; 
+}
+
+.javascript-reddit{
+    grid-area: javascript-reddit;
+}
+
+.javascript-history{
+    grid-area: javascript-history;
+}
+
+.datetime{
+    grid-area:datetime;
+}
+
+.github-issues{
+    grid-area: github-issues;
+}
