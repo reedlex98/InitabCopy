@@ -1,3 +1,4 @@
+/* general style section */
 *{
     font-family: 'Inconsolata',monospace;
     text-decoration: none;
@@ -6,6 +7,23 @@
 a{
     color: inherit;
 }
+section{
+    font-size: .85em;
+    line-height: 1.25em;
+}
+section h1{
+    font-size: 1.15em;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+}
+section h2{
+    font-size: 0.9em;
+    font-weight: 100;
+    text-align: center;
+    margin-top: -15px;
+}
+/* end of general style section */
 
 /* global variables declaration */
 :root{
@@ -92,7 +110,7 @@ header{
 section{
     overflow: auto;
     scroll-behavior: smooth;
-    padding: 25px 30px;
+    padding: 25px 20px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -163,3 +181,16 @@ header i{
     margin-right: 10px;
 }
 /* header section end */
+/* javascript reddit section style */
+
+.post-card{
+    border-left: 3px solid var(--header-color);
+    padding-left:10px;
+    margin: 40px auto;
+}
+.post-card:hover{
+    border-color: var(--green);
+    cursor: pointer;
+}
+
+/* javascript reddit section end */
