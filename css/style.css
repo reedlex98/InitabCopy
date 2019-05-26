@@ -3,8 +3,13 @@
     text-decoration: none;
     list-style: none;
 }
+a{
+    color: inherit;
+}
+
+/* global variables declaration */
 :root{
-    --header-width:150px;
+    --header-width:140px;
     --reddit-section-width: 300px;
     --github-section-width: 300px;
     --jshistory-section-width:1fr;
@@ -15,11 +20,56 @@
     --dark-blue: #6272a4;
     --green:#50f97b;
     --white:#f8f8f2;
+    --dark-purple:#44475a;
     --lightblue: #8be9fd;
     --purple: #bd93f9;
+    --gray:#999;
+    --orange: #ffb86c;
     --header-color:#44475a;
     --page-color: #282a36;
 }
+/* end of declaration */
+
+/* implementing color classes */
+
+.pink-text{
+    color: var(--pink)
+}
+.yellow-text{
+    color: var(--yellow)
+}
+.blue-text{
+    color: var(--blue)
+}
+.dark-blue-text{
+    color: var(--dark-blue)
+}
+.green-text{
+    color: var(--green)
+}
+.white-text, .main-text{
+    color: var(--white)
+}
+.dark-purple-text{
+    color: var(--dark-purple)
+}
+.light-blue-text{
+    color: var(--lightblue)
+}
+.purple-text{
+    color: var(--purple)
+}
+.gray-text, .post-date{
+    color: var(--gray)
+}
+.orange-text{
+    color: var(--orange);
+}
+
+/* color classes section end */
+
+
+/* page layout */
 body{
     padding: 0;
     margin: 0;
@@ -66,3 +116,50 @@ section::-webkit-scrollbar {
 .github-issues{
     grid-area: github-issues;
 }
+/* layout section end */
+
+/* header style */
+header{
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+header,nav, ul,li{
+    padding: 0;
+    margin: 0;
+}
+header{
+    padding: 25px 0;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header nav ul li{
+    margin-bottom: 25px;
+}
+header i{
+    color: inherit;
+    width:15px;
+}
+.contact div, .contact ul{
+    width: 85%;
+}
+.contact div{
+    margin-left: 5px;
+}
+.contact div img{
+    max-width: 90%;
+}
+.contact ul{
+    margin-top:10px;
+    margin-bottom: -10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact ul li{
+    display: inline-block;
+    font-size: 1.75em;
+    margin-right: 10px;
+}
+/* header section end */
