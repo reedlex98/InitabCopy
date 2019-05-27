@@ -16,9 +16,9 @@ function advertisorGen(content) {
 function detailTextGen(type, postedBy, redditScore, hasComments, advertisor) {
     let detailText = $('<p>').addClass('detail-text')
     if (type === 'userPost') {
-        detailText.append(postedByGen(postedBy),'<br>')
-        detailText.append(redditScoreGen(redditScore),'<br>')
-        if(hasComments) detailText.append(linkCommentsGen(hasComments))
+        detailText.append(postedByGen(postedBy), '<br>')
+        detailText.append(redditScoreGen(redditScore), '<br>')
+        if (hasComments) detailText.append(linkCommentsGen(hasComments))
     }
     else
         detailText.append(advertisorGen(advertisor))
@@ -27,7 +27,6 @@ function detailTextGen(type, postedBy, redditScore, hasComments, advertisor) {
 function postCardGen(mainText, detailText) {
     return $('<div>').addClass('post-card').append(mainText, detailText)
 }
-console.log('jack')
 $.getJSON("./bd/jsreddit.json", function (data) {
     for (let d of data) {
         if (d['type'] === 'userPost') {
@@ -35,8 +34,8 @@ $.getJSON("./bd/jsreddit.json", function (data) {
                 .append(postCardGen(mainTextGen(d['maintext']), detailTextGen(d['type'], d['postedby'], d['redditscore'], d['hascomments'])))
         } else {
             $('.javascript-reddit')
-                .append(postCardGen(mainTextGen(d['maintext']), detailTextGen(d['type'],null,null,null,d['advertisor'])))
+                .append(postCardGen(mainTextGen(d['maintext']), detailTextGen(d['type'], null, null, null, d['advertisor'])))
         }
     }
 }
-);
+)

@@ -9,7 +9,7 @@ a{
 }
 section{
     font-size: .85em;
-    line-height: 1.25em;
+    line-height: 1.5em;
 }
 section h1{
     font-size: 1.15em;
@@ -28,10 +28,12 @@ section h2{
 /* global variables declaration */
 :root{
     --header-width:140px;
-    --reddit-section-width: 300px;
-    --github-section-width: 300px;
+    --reddit-section-width: 23vw;
+    --github-section-width: 23vw;
     --jshistory-section-width:1fr;
     --jshistory-section-height: 50vh;
+    --advertise-diff-height: 27vh;
+    --advertise-section-height: 23vh;
     --pink: #ff79c6;
     --yellow: #f1f98c;
     --blue: #66d9ef;
@@ -95,10 +97,11 @@ body{
     grid-template-columns: 
         var(--header-width) var(--reddit-section-width) var(--jshistory-section-width) var(--github-section-width);
     grid-template-rows: 
-        var(--jshistory-section-height) var(--jshistory-section-height);
+        var(--jshistory-section-height) var(--advertise-diff-height) var(--advertise-section-height);
     grid-template-areas: 
         "header javascript-reddit javascript-history github-issues"
-        "header javascript-reddit datetime github-issues";
+        "header javascript-reddit datetime github-issues"
+        "header javascript-reddit datetime advertise";
     background-color: var(--page-color);
 }
 header{
@@ -110,7 +113,7 @@ header{
 section{
     overflow: auto;
     scroll-behavior: smooth;
-    padding: 25px 20px;
+    padding: 25px 15px;
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
@@ -118,7 +121,9 @@ section{
 section::-webkit-scrollbar { 
     display: none; 
 }
-
+.advertise{
+    grid-area: advertise;
+}
 .javascript-reddit{
     grid-area: javascript-reddit;
 }
@@ -188,9 +193,30 @@ header i{
     padding-left:10px;
     margin: 40px auto;
 }
+.javascript-reddit .post-card .detail-text{
+    margin-top: -10px;
+}
 .post-card:hover{
     border-color: var(--green);
     cursor: pointer;
 }
 
 /* javascript reddit section end */
+
+/* javascript history style section */
+.javascript-history h1{
+    margin-bottom: 40px;
+}
+.javascript-history .post-history-container{
+    display:flex;
+    flex-direction: row;
+}
+
+.javascript-history .post-date{
+    margin-left: auto;
+}
+
+.post-history:hover{
+    color: var(--yellow);
+}
+/* javascript history section end */
