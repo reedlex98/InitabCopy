@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Initab - Chrome New Tab Extension for Developers</title>
 </head>
@@ -43,7 +44,8 @@
         <h1 class="light-blue-text"> <i class="fab fa-reddit-alien"></i> Popular on r/javascript </h1>
         <div class="post-card">
             <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione tempo
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
+                ratione tempo
             </p>
             <p class="detail-text">
                 <span class="yellow-text">Start Free Trial</span>
@@ -54,7 +56,8 @@
 
         <div class="post-card">
             <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione Repudiandae non maiores odio numquam, adipisci ratione tempo
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
+                ratione Repudiandae non maiores odio numquam, adipisci ratione tempo
             </p>
             <p class="detail-text">
                 <span class="blue-text">Posted by: </span><span class="yellow-text">u/geek007</span><br>
@@ -67,23 +70,25 @@
     <section class="javascript-history">
         <h1 class="light-blue-text"><i class="far fa-clock"></i> Relevant Javascript History</h1>
         <p class="post-history-container">
-            <span class="dark-blue-text post-history">Lorem ipsum dolor sit amet consectetur adipisicing elit</span><span class="post-date"> 2 days ago </span>
+            <span class="dark-blue-text post-history">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit</span><span class="post-date"> 2 days ago </span>
         </p>
     </section>
-    
+
     <section class="datetime">
         <div class="clock-display ">
-            <span class="hour-minute"></span><br>
-            <!-- <span class="daytime"> PM</span> -->
+            <span class="hour-minute"></span>
+            <span class="daytime"></span><br>
             <span class="date"></span>
         </div>
         <p class="custom-link-info dark-blue-text">
-            <span class="orange-text"><i class="fa fa-question"></i></span> Did you know you can add CUSTOM LINKS to display in this section?
+            <span class="orange-text"><i class="fa fa-question"></i></span> Did you know you can add CUSTOM LINKS to
+            display in this section?
             Open the SETTINGS panel and add the URLs of your favorites sites to the 'CUSTOM LINKS' textarea.<br>
             <span class="orange-text hide"><i class="fa fa-times-circle"></i> Got it! Dont show me this again.</span>
         </p>
     </section>
-    
+
     <section class="github-issues">
         <h1 class="light-blue-text"><i class="fab fa-github-alt"></i> Github issues history</h1>
         <h2 class="dark-blue-text">switch to gitlab</h2>
@@ -93,7 +98,8 @@
         </ul>
         <div class="post-card">
             <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione Repudiandae non maiores odio numquam, adipisc
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
+                ratione Repudiandae non maiores odio numquam, adipisc
             </p>
             <p class="detail-text">
                 <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span><br>
@@ -106,11 +112,13 @@
     <script src="js/JSONToPostCard.js"></script>
     <script src="js/JSONToJsHistory.js"></script>
     <script>
-        $('.hide').click( e => $('.custom-link-info').fadeOut())
-        setInterval(()=>{
-            $('.hour-minute').text(`${(new Date).getHours()<10 ? '0'+(new Date).getHours():(new Date).getHours()}:${(new Date).getMinutes()<10 ? '0'+(new Date).getMinutes():(new Date).getMinutes()}`)
-            $('.date').text(`${ Array.from(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jul', 'Jun', 'Ago', 'Sep', 'Oct', 'Nov', 'Dec'])[(new Date).getMonth()]} ${(new Date).getDate()}, ${(new Date).getFullYear()} `)
-        },1000)
+        $('.hide').click(e => $('.custom-link-info').fadeOut())
+        setInterval(() => {
+            $('.hour-minute').text(`${(new Date).getHours() < 10 ? '0' + (new Date).getHours() : (new Date).getHours()}:${(new Date).getMinutes() < 10 ? '0' + (new Date).getMinutes() : (new Date).getMinutes()}`)
+            $('.date').text(`${Array.from(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jul', 'Jun', 'Ago', 'Sep', 'Oct', 'Nov', 'Dec'])[(new Date).getMonth()]} ${(new Date).getDate()}, ${(new Date).getFullYear()} `)
+            // $('.daytime')
+        }, 1000)
+        document.getElementsByClassName('detail-text').setAttribute('')
     </script>
 </body>
 
