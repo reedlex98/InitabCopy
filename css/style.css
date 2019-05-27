@@ -164,6 +164,12 @@ header i{
     color: inherit;
     width:15px;
 }
+header nav ul{
+    margin-left: -5px;
+}
+header nav ul li{
+    margin-bottom: 20px;
+}
 .contact div, .contact ul{
     width: 85%;
 }
@@ -184,6 +190,36 @@ header i{
     display: inline-block;
     font-size: 1.75em;
     margin-right: 10px;
+}
+.icon{
+    display: inline-block;
+    text-align: center;
+    padding: 4px;
+    border-radius: 2px;
+}
+.icon-color{
+    color: var(--header-color)
+}
+.icon-background-settings{
+    background-color: var(--lightblue)
+}
+.icon-background-gists{
+    background-color: var(--green)
+}
+.icon-background-stack{
+    background-color: var(--orange)
+}
+.icon-background-trending{
+    background-color: var(--pink)
+}
+.icon-background-scratch{
+    background-color: var(--purple)
+}
+.icon-background-playground{
+    background-color: var(--white)
+}
+.icon-background-help{
+    background-color: var(--yellow)
 }
 /* header section end */
 /* javascript reddit section style */
