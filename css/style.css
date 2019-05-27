@@ -292,16 +292,17 @@ header i{
 .advertise{
     border-top: 1px solid var(--dark-purple);
     margin-left: 15px;
+    padding: 0;
 }
 .advertise .post-card{
-    margin: 0;
     min-height: 100px;
+    margin-top: 25px;
 }
 .advertise small{
     display: block;
     text-align: center;
     position: relative;
-    top: 35px; bottom: 35px;
+    top: 40px; bottom: 35px;
 }
 
 /* advertise section end */
