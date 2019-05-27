@@ -291,7 +291,9 @@ header i{
 
 .advertise{
     border-top: 1px solid var(--dark-purple);
+    margin: auto;
     margin-left: 15px;
+
 }
 
 /* advertise section end */
