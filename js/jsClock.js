@@ -3,7 +3,7 @@ $(function (e) {
         let hour = ''
         if (date.getHours() < 10)
             hour = `0${date.getHours()}`
-        else if (date.getHours() < 12)
+        else if (date.getHours() <= 12)
             hour = date.getHours()
         else
             hour = (date.getHours() - 12) < 10 ? `0${(date.getHours() - 12)}` : date.getHours() - 12
