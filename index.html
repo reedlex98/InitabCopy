@@ -42,37 +42,10 @@
 
     <section class="javascript-reddit">
         <h1 class="light-blue-text"> <i class="fab fa-reddit-alien"></i> Popular on r/javascript </h1>
-        <div class="post-card">
-            <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
-                ratione tempo
-            </p>
-            <p class="detail-text">
-                <span class="yellow-text">Start Free Trial</span>
-                <br>
-                <span class="pink-text">Sponsored by monday</span>
-            </p>
-        </div>
-
-        <div class="post-card">
-            <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
-                ratione Repudiandae non maiores odio numquam, adipisci ratione tempo
-            </p>
-            <p class="detail-text">
-                <span class="blue-text">Posted by: </span><span class="yellow-text">u/geek007</span><br>
-                <span class="dark-blue-text">Reddit score: 21</span>
-                <span class="pink-text">Link to Comments</span>
-            </p>
-        </div>
     </section>
 
     <section class="javascript-history">
         <h1 class="light-blue-text"><i class="far fa-clock"></i> Relevant Javascript History</h1>
-        <p class="post-history-container">
-            <span class="dark-blue-text post-history">Lorem ipsum dolor sit amet consectetur adipisicing
-                elit</span><span class="post-date"> 2 days ago </span>
-        </p>
     </section>
 
     <section class="datetime">
@@ -96,30 +69,12 @@
             <li class="yellow-text">Issues</li>
             <li class="pink-text">Pull Requests</li>
         </ul>
-        <div class="post-card">
-            <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci
-                ratione Repudiandae non maiores odio numquam, adipisc
-            </p>
-            <p class="detail-text">
-                <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span><br>
-                <span class="yellow-text">Issue #1341</span>
-            </p>
-        </div>
     </section>
     <section class="advertise"></section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/JSONToPostCard.js"></script>
     <script src="js/JSONToJsHistory.js"></script>
-    <script>
-        $('.hide').click(e => $('.custom-link-info').fadeOut())
-        setInterval(() => {
-            $('.hour-minute').text(`${(new Date).getHours() < 10 ? '0' + (new Date).getHours() : (new Date).getHours()}:${(new Date).getMinutes() < 10 ? '0' + (new Date).getMinutes() : (new Date).getMinutes()}`)
-            $('.date').text(`${Array.from(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jul', 'Jun', 'Ago', 'Sep', 'Oct', 'Nov', 'Dec'])[(new Date).getMonth()]} ${(new Date).getDate()}, ${(new Date).getFullYear()} `)
-            // $('.daytime')
-        }, 1000)
-        document.getElementsByClassName('detail-text').setAttribute('')
-    </script>
+    <script src="js/jsClock.js"></script>
 </body>
 
 </html>
