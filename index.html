@@ -72,47 +72,32 @@
     </section>
     
     <section class="datetime">
-        <div class="clock-display">
-
+        <div class="clock-display ">
+            <span class="hour-minute"></span><br>
+            <!-- <span class="daytime"> PM</span> -->
+            <span class="date"></span>
         </div>
         <p class="custom-link-info dark-blue-text">
-            <span class="orange-text"><i>?</i></span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam asperiores nisi totam quasi saepe laudantium id eius sint inventor
-            <span class="orange-text"><i></i>Got it! Dont show me this again.</span>
+            <span class="orange-text"><i class="fa fa-question"></i></span> Did you know you can add CUSTOM LINKS to display in this section?
+            Open the SETTINGS panel and add the URLs of your favorites sites to the 'CUSTOM LINKS' textarea.<br>
+            <span class="orange-text hide"><i class="fa fa-times-circle"></i> Got it! Dont show me this again.</span>
         </p>
     </section>
     
     <section class="github-issues">
-        <h1 class="light-blue-text">Github issues history</h1>
+        <h1 class="light-blue-text"><i class="fab fa-github-alt"></i> Github issues history</h1>
         <h2 class="dark-blue-text">switch to gitlab</h2>
         <ul>
-            <li>Issues</li>
-            <li>Pull Request</li>
+            <li class="yellow-text">Issues</li>
+            <li class="pink-text">Pull Requests</li>
         </ul>
         <div class="post-card">
-            <p class="detail-text">
-                <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span>
-                <span class="yellow-text">Issue #1341</span>
-            </p>
             <p class="main-text">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione Repudiandae non maiores odio numquam, adipisc
             </p>
-        </div>
-        <div class="post-card">
             <p class="detail-text">
-                <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span>
+                <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span><br>
                 <span class="yellow-text">Issue #1341</span>
-            </p>
-            <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione Repudiandae non maiores odio numquam, adipisc
-            </p>
-        </div>
-        <div class="post-card">
-            <p class="detail-text">
-                <span class="dark-blue-text">Repo: GoogleChrome/puppeter</span>
-                <span class="yellow-text">Issue #1341</span>
-            </p>
-            <p class="main-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non maiores odio numquam, adipisci ratione Repudiandae non maiores odio numquam, adipisc
             </p>
         </div>
     </section>
@@ -120,6 +105,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/JSONToPostCard.js"></script>
     <script src="js/JSONToJsHistory.js"></script>
+    <script>
+        $('.hide').click( e => $('.custom-link-info').fadeOut())
+        setInterval(()=>{
+            $('.hour-minute').text(`${(new Date).getHours()<10 ? '0'+(new Date).getHours():(new Date).getHours()}:${(new Date).getMinutes()<10 ? '0'+(new Date).getMinutes():(new Date).getMinutes()}`)
+            $('.date').text(`${ Array.from(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jul', 'Jun', 'Ago', 'Sep', 'Oct', 'Nov', 'Dec'])[(new Date).getMonth()]} ${(new Date).getDate()}, ${(new Date).getFullYear()} `)
+        },1000)
+    </script>
 </body>
 
 </html>

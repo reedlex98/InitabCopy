@@ -220,3 +220,68 @@ header i{
     color: var(--yellow);
 }
 /* javascript history section end */
+
+/* github issues style section */
+.github-issues .post-card{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.github-issues .post-card .main-text{
+    margin-top:-5px;
+    margin-bottom: 0px
+}
+.github-issues .post-card .detail-text{
+    margin-top: 0px;
+}
+.github-issues ul{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+.github-issues ul li{
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    word-spacing: -5px;
+    cursor: pointer;
+}
+.github-issues ul li.pink-text:hover{
+    color: var(--green);
+}
+/* github issues section end */
+/* datetime style section  */
+.datetime{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.datetime .custom-link-info{
+    text-align: center;
+}
+.datetime .hide{
+    cursor: pointer
+}
+.datetime .clock-display{
+    margin: 50px auto -25px;
+    text-align: center;
+    color: var(--dark-blue);      
+}
+.datetime .clock-display span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+.hour-minute{
+    font-size: 8em;
+    word-spacing: -50px;
+}
+.daytime{
+    font-size: 2.5em;
+}
+.date{
+    display: block;
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+/* datetime section end */
